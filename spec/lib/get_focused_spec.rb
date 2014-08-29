@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'get_focused'
 
 describe GetFocused do
   it "should return a hellow message" do

@@ -1,7 +1,7 @@
 require "get_focused/version"
 
 module GetFocused
-  def self.hi
+  def hi
     'Hello World'
   end
 end
