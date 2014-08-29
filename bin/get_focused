@@ -2,4 +2,4 @@
 
 require 'get_focused'
 
-puts GetFocused.hi
+puts GetFocused::Hello.new.world
