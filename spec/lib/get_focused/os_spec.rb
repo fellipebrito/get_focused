@@ -23,7 +23,12 @@ describe GetFocused::Host do
       RUBY_PLATFORM = 'linux'
       file_source = GetFocused::Host.new.file_source
       expect(file_source).to eql '/etc/hosts'
-      expect(File.exist? file_source).to be_truthy
+    end
+
+    it 'should find the hosts file when in mac' do
+      RUBY_PLATFORM = 'universal.x86_64-darwin13'
+      file_source = GetFocused::Host.new.file_source
+      expect(file_source).to eql '/private/etc/hosts'
     end
   end
 end
